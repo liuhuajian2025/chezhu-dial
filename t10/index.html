@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>请扫码拨打号码联系车主</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+  html, body { height: 100%; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", "Microsoft YaHei", sans-serif;
+    background: linear-gradient(160deg, #e8f0fe 0%, #f7faff 60%, #ffffff 100%);
+    display: flex; align-items: center; justify-content: center;
+    min-height: 100%; padding: 24px; color: #0d47a1;
+  }
+  .card {
+    width: 100%; max-width: 420px;
+    background: #ffffff;
+    border-radius: 24px;
+    box-shadow: 0 12px 40px rgba(13, 71, 161, 0.15);
+    padding: 40px 28px 44px;
+    text-align: center;
+  }
+  .title { font-size: 21px; font-weight: 600; letter-spacing: 1px; color: #1565c0; margin-bottom: 28px; }
+  .phone-icon {
+    width: 76px; height: 76px; margin: 0 auto 24px;
+    border-radius: 50%; background: #e8f0fe;
+    display: flex; align-items: center; justify-content: center;
+    animation: pulse 2s ease-in-out infinite;
+  }
+  .phone-icon svg { width: 38px; height: 38px; fill: #1565c0; }
+  @keyframes pulse {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(21, 101, 192, 0.35); }
+    50% { box-shadow: 0 0 0 14px rgba(21, 101, 192, 0); }
+  }
+  .number {
+    display: inline-block;
+    font-size: 34px; font-weight: 700; letter-spacing: 2px;
+    color: #ffffff; background: linear-gradient(135deg, #1e88e5, #0d47a1);
+    padding: 18px 26px; border-radius: 16px;
+    text-decoration: none;
+    box-shadow: 0 8px 20px rgba(21, 101, 192, 0.35);
+    transition: transform .12s ease, box-shadow .12s ease;
+  }
+  .number:active { transform: scale(0.97); box-shadow: 0 4px 12px rgba(21, 101, 192, 0.4); }
+  .hint { margin-top: 26px; font-size: 15px; color: #5c7ca8; }
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="title">请扫码拨打号码联系车主</div>
+    <div class="phone-icon">
+      <svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.4 0 .8-.3 1l-2.2 2.2z"/></svg>
+    </div>
+    <a class="number" href="tel:18823360657">188&nbsp;****&nbsp;0657</a>
+    <div class="hint">点击上方号码即可拨打</div>
+  </div>
+</body>
+</html>
